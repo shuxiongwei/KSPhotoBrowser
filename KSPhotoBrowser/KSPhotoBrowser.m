@@ -112,9 +112,19 @@ static Class ImageManagerClass = nil;
     [self addGestureRecognizer];
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    // 显示状态栏
+    [UIApplication sharedApplication].statusBarHidden = NO;
+}
+
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
    
+    // 隐藏状态栏
+    [UIApplication sharedApplication].statusBarHidden = YES;
+    
     KSPhotoItem *item = [_photoItems objectAtIndex:_currentPage];
     if (_delegate && [_delegate respondsToSelector:@selector(ks_photoBrowser:didSelectItem:atIndex:)]) {
         [_delegate ks_photoBrowser:self didSelectItem:item atIndex:_currentPage];
