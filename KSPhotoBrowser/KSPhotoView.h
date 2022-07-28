@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "KSProgressLayer.h"
+#import "SDAnimatedImageView+WebCache.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -18,7 +19,7 @@ extern const CGFloat kKSPhotoViewPadding;
 
 @interface KSPhotoView : UIScrollView
 
-@property (nonatomic, strong, readonly) UIImageView *imageView;
+@property (nonatomic, strong, readonly) SDAnimatedImageView *imageView;
 @property (nonatomic, strong, readonly) KSProgressLayer *progressLayer;
 @property (nonatomic, strong, readonly) KSPhotoItem *item;
 @property (class, nonatomic, strong) UIColor *backgroundColor;
