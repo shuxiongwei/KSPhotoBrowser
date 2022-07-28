@@ -18,7 +18,7 @@ static UIColor *BackgroundColor = nil;
 
 @interface KSPhotoView ()<UIScrollViewDelegate, UIGestureRecognizerDelegate>
 
-@property (nonatomic, strong, readwrite) UIImageView *imageView;
+@property (nonatomic, strong, readwrite) SDAnimatedImageView *imageView;
 @property (nonatomic, strong, readwrite) KSProgressLayer *progressLayer;
 @property (nonatomic, strong, readwrite) KSPhotoItem *item;
 
